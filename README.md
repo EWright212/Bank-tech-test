@@ -11,6 +11,8 @@ Assumptions made:
  6. Assume a printed statement at end of day and includes all transactions already input into the system from same day
  7. Each transaction/request for bank statement made in separate command line instruction
  8. Assume no need for multiple users, just one person interacting with system at once
+ 9. Assume no limit on amounts in balance/transactions as long as not interfering with computer memory
+ 10. Assume unlimited requests/transactions in a day (again as long as not running into memory issues)
 
 
  Edge cases:
@@ -21,3 +23,9 @@ Assumptions made:
  - negative balance is allowable
  - Negative credit/Negative debit transaction throws error
  - Transactions for invalid dates (check what a normal computer considers an acceptable date)
+
+ Notes to self:
+
+ - Dates in UK format
+ - No commas or number separators for cr/dr/balance
+ - No mention of currency
