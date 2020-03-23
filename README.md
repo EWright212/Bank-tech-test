@@ -8,12 +8,16 @@ Assumptions made:
  - In order to keep dates clear for myself I have used 01/01/2020 as a testing date.
  4. Account has no credit/debit limit
  5. Debit balance shown as a negative number instead of Cr/Dr
+ 6. Assume a printed statement at end of day and includes all transactions already input into the system from same day
+ 7. Each transaction/request for bank statement made in separate command line instruction
+ 8. Assume no need for multiple users, just one person interacting with system at once
 
 
  Edge cases:
 
  - No transactions 
  - Transactions of zero
- - Statement printed for a date before transaction
- - negative balance
+ - Statement printed for a date before transaction should only show transactions prior/including statements date
+ - negative balance is allowable
  - Negative credit/Negative debit transaction throws error
+ - Transactions for invalid dates (check what a normal computer considers an acceptable date)
