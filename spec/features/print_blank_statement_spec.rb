@@ -1,8 +1,10 @@
 require 'bank_statement'
 
-describe 'print a bank statment' do
-  it 'print one line bank statment' do
-    bank_statement = BankStatement.new
-    expect(bank_statement.print_statement).to eq("date || credit || debit || balance\n")
+describe 'print bank statement' do
+  it 'print one line bank statment, no transactions' do
+    expect do
+      BankStatement.new.print_statement
+    end.to output("date || credit || debit || balance\n").to_stdout
   end
 end
+
