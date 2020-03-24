@@ -23,6 +23,7 @@ Assumptions made:
  - negative balance is allowable
  - Negative credit/Negative debit transaction throws error
  - Transactions for invalid dates (check what a normal computer considers an acceptable date)
+ - Transactions not in format X.XX
 
  Notes to self (formatting):
 
