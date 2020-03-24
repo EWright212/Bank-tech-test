@@ -1,6 +1,6 @@
 class BankStatement
   def print_statement
-    print "date || credit || debit || balance\n"
+    print BankStatement.new.get_statement
   end
 
   def get_statement
