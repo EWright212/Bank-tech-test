@@ -10,8 +10,7 @@ class Account
     two_dp_amount = '%.2f' % input_amount
 
     @all_transactions = "#{date} || #{two_dp_amount} || || #{two_dp_amount}"
-    p "in make deposit"
-    p @all_transactions
+
   end
 
   # def save_transaction
