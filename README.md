@@ -21,7 +21,7 @@ Assumptions made:
 
  Edge cases:
 
- - No transactions 
+ - No transactions -- TESTED
  - Transactions of zeros
  - negative balance is allowable
  - Negative credit/Negative debit transaction throws error
