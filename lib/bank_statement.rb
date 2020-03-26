@@ -9,10 +9,11 @@ class BankStatement
   end
 
   def get_statement
-  
-    output = @list_of_transactions.inspect
     
-    if @list_of_transactions == 0
+   
+    output = @list_of_transactions[0].inspect
+    
+    if @list_of_transactions == []
       output = ""
     else
       output = "\n" + output.gsub!(/\A"|"\Z/, '')
