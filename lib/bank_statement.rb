@@ -8,7 +8,7 @@ class BankStatement
     puts "date || credit || debit || balance"
     if @list_of_transactions == []
     else
-      @list_of_transactions.each do |transaction|
+      @list_of_transactions.reverse.each do |transaction|
         puts transaction.inspect.gsub!(/\A"|"\Z/, '')
       end
     end
