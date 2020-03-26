@@ -18,4 +18,8 @@ describe 'edge cases' do
       bankstatement.print_statement
     end.to output("date || credit || debit || balance\n01/01/2020 || || 0.00 || 0.00\n").to_stdout
   end
+  it 'deposit of negative deposit made throws error' do
+    account = Account.new
+    expect{account.make_withdrawal(-100.00, "01/01/2020")}.to raise_error(RuntimeError, "Cannot input a negative amount")
+  end
 end
