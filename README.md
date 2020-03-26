@@ -26,7 +26,7 @@ Assumptions made:
  - Transactions of zeros -- Expect to be possible and appear as a real transaction
  - negative balance  -- Expect to be permissable
  - Negative credit/Negative debit transaction throws error - TESTED
- - Transactions not in format X.XX
+ - Transactions not in format X.XX - TESTED
 
  Notes to self (formatting):
 

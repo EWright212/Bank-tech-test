@@ -13,7 +13,8 @@ describe 'user can make a deposit' do
   it 'user makes one withdrawal and balance changed' do
     account = Account.new
     expect(account.balance).to eq(0)
-    expect(account.make_withdrawal(200.00, "02/01/2020")).to eq(["02/01/2020 || || 200.00 || -200.00"])
+    expect(account.make_withdrawal(200.00, "02/01/2020")).to eq(
+      ["02/01/2020 || || 200.00 || -200.00"])
     expect(account.balance).to eq(-200.0)
   end
 end

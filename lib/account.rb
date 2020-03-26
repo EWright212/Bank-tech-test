@@ -8,7 +8,7 @@ class Account
   end
 
   def make_deposit(deposit_amount, date)
-    if deposit_amount < 0
+    if deposit_amount.negative?
       raise RuntimeError, "Cannot input a negative amount"
     end
 
@@ -22,7 +22,7 @@ class Account
 
   def make_withdrawal(withdrawal_amount, date)
     
-    if withdrawal_amount < 0
+    if withdrawal_amount.negative? 
       raise "Cannot input a negative amount"
     end
 
@@ -45,7 +45,7 @@ class Account
   end
 
   def convert_two_dp(float)
-    two_dp_string = '%.2f' % float
+    '%.2f' % float
   end
 
 end
