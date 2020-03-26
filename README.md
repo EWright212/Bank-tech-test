@@ -14,6 +14,8 @@ Assumptions made:
  9. Assume no limit on amounts in balance/transactions as long as not interfering with computer memory
  10. Assume unlimited requests/transactions in a day (again as long as not running into memory issues)
  11. Assume statement just outputs all transactions made, in order of input to stystem, not in chronological order
+ 12. Withdrawals and deposits happen sepererately
+ 13. Withdrawals and deposits made for amounts rounded to nearest pence
 
 
  Edge cases:
