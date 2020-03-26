@@ -16,7 +16,8 @@ Assumptions made:
  11. Assume statement just outputs all transactions made, in order of input to stystem, not in chronological order
  12. Withdrawals and deposits happen sepererately
  13. Withdrawals and deposits made for amounts rounded to nearest pence
- 14. Withdrawals are not in negative form
+ 14. Withdrawals/deposits are not in negative form
+ 15. Transactions are given valid dates as user self inputs dates
 
 
  Edge cases:
@@ -24,9 +25,7 @@ Assumptions made:
  - No transactions -- TESTED
  - Transactions of zeros -- Expect to be possible and appear as a real transaction
  - negative balance  -- Expect to be permissable
- - Negative credit/Negative debit transaction throws error
-
- - Transactions for invalid dates (check what a normal computer considers an acceptable date)
+ - Negative credit/Negative debit transaction throws error - TESTED
  - Transactions not in format X.XX
 
  Notes to self (formatting):
