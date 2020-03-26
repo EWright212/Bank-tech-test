@@ -23,14 +23,15 @@ class Account
     two_dp_amount = convert_two_dp(input_amount)
     two_dp_balance = convert_two_dp(@balance)
 
-    @all_transactions << "#{date} || || #{two_dp_amount} || #{two_dp_balance}"
+    save_deposit(two_dp_amount, date, two_dp_balance)
 
   end
 
   private
 
-  # def save_deposit
-  # end
+  def save_deposit(two_dp_amount, date, two_dp_balance)
+    @all_transactions << "#{date} || || #{two_dp_amount} || #{two_dp_balance}"
+  end
 
   # def save_withdrawal
   # end
