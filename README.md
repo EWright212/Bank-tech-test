@@ -22,9 +22,10 @@ Assumptions made:
  Edge cases:
 
  - No transactions -- TESTED
- - Transactions of zeros
- - negative balance is allowable
+ - Transactions of zeros -- Expect to be possible and appear as a real transaction
+ - negative balance  -- Expect to be permissable
  - Negative credit/Negative debit transaction throws error
+
  - Transactions for invalid dates (check what a normal computer considers an acceptable date)
  - Transactions not in format X.XX
 
@@ -33,3 +34,13 @@ Assumptions made:
  - Dates in UK format
  - No commas or number separators for cr/dr/balance
  - No mention of currency
+
+ Ideas to do in future
+
+ - User doesn't specify withdrawal/deposit - just gives a positive or negative amount and app works out required procedure
+ - Transactions of 0.00 do not appear on statament
+ - Bank statement sorts transactions into order of occurence if user input in non chronological order
+
+
+ myself to do before finish
+ - sep out layout to diff class??
