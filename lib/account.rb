@@ -14,7 +14,6 @@ class Account
     two_dp_balance = convert_two_dp(@balance)
 
     save_deposit(two_dp_deposit, date, two_dp_balance)
-
   end
 
   def make_withdrawal(withdrawal_amount, date)
@@ -24,7 +23,6 @@ class Account
     two_dp_balance = convert_two_dp(@balance)
 
     save_withdrawal(two_dp_withdrawal, date, two_dp_balance)
-
   end
 
   private
