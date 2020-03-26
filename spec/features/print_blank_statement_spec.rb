@@ -9,4 +9,3 @@ describe 'print bank statement' do
     end.to output("date || credit || debit || balance\n").to_stdout
   end
 end
-

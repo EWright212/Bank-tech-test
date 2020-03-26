@@ -1,5 +1,5 @@
 # require 'bank_statement'
-#TODO - UPDATE OR DELETE FILE
+# TODO - UPDATE OR DELETE FILE
 # describe 'gets output for bank statement' do
 #   it 'print one line bank statment, no transactions' do
 #     #TODO - doubles here as not feature test

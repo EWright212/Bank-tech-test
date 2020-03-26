@@ -26,5 +26,6 @@ class Account
     @all_transactions << "#{date} || || #{two_dp_amount} || #{two_dp_balance}"
 
   end
-  # TODO - rename input amounts, split this 2dp thing, split save formatting, then write unit tests for these
+  # TODO - rename input amounts, split this 2dp thing, 
+  # split save formatting, then write unit tests for these
 end
