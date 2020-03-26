@@ -5,20 +5,26 @@ class BankStatement
   end
 
   def print_statement
-    puts get_statement
-  end
-
-  def get_statement
-    
+    puts "date || credit || debit || balance"
     if @list_of_transactions == []
-      output = ""
     else
       @list_of_transactions.each do |transaction|
-        output = transaction.inspect
+        puts transaction.inspect.gsub!(/\A"|"\Z/, '')
       end
-      output = "\n" + output.gsub!(/\A"|"\Z/, '')
     end
-
-    "date || credit || debit || balance#{output}"
   end
+
+  # def get_statement
+    
+  #   if @list_of_transactions == []
+  #     output = ""
+  #   else
+  #     @list_of_transactions.each do |transaction|
+  #       output = transaction.inspect
+  #     end
+  #     output = "\n" + output.gsub!(/\A"|"\Z/, '')
+  #   end
+
+  #   "date || credit || debit || balance#{output}"
+  # end
 end
