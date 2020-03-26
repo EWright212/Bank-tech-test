@@ -10,8 +10,8 @@ class Account
   def make_deposit(input_amount, date)
     @balance += input_amount
 
-    two_dp_amount = '%.2f' % input_amount
-    two_dp_balance = '%.2f' % @balance
+    two_dp_amount = convert_two_dp(input_amount)
+    two_dp_balance = convert_two_dp(@balance)
 
     @all_transactions << "#{date} || #{two_dp_amount} || || #{two_dp_balance}"
 
@@ -20,11 +20,23 @@ class Account
   def make_withdrawal(input_amount, date)
     @balance -= input_amount
 
-    two_dp_amount = ('%.2f' % input_amount)
-    two_dp_balance = '%.2f' % @balance
+    two_dp_amount = convert_two_dp(input_amount)
+    two_dp_balance = convert_two_dp(@balance)
 
     @all_transactions << "#{date} || || #{two_dp_amount} || #{two_dp_balance}"
 
+  end
+
+  private
+
+  # def save_deposit
+  # end
+
+  # def save_withdrawal
+  # end
+
+  def convert_two_dp(float)
+    two_dp_string = '%.2f' % float
   end
   # TODO - rename input amounts, split this 2dp thing, 
   # split save formatting, then write unit tests for these
