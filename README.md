@@ -16,6 +16,7 @@ Assumptions made:
  11. Assume statement just outputs all transactions made, in order of input to stystem, not in chronological order
  12. Withdrawals and deposits happen sepererately
  13. Withdrawals and deposits made for amounts rounded to nearest pence
+ 14. Withdrawals are not in negative form
 
 
  Edge cases:
