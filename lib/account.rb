@@ -8,6 +8,7 @@ class Account
   end
 
   def make_deposit(deposit_amount, date)
+    # TODO: make these if "guard clauses" one-liners: raise xxx if yyy
     if deposit_amount.negative?
       raise RuntimeError, "Cannot input a negative amount"
     end
@@ -21,7 +22,7 @@ class Account
   end
 
   def make_withdrawal(withdrawal_amount, date)
-    
+    # TODO: make these if "guard clauses" one-liners: raise xxx if yyy
     if withdrawal_amount.negative? 
       raise "Cannot input a negative amount"
     end
@@ -32,6 +33,13 @@ class Account
     two_dp_balance = convert_two_dp(@balance)
 
     save_withdrawal(two_dp_withdrawal, date, two_dp_balance)
+
+    # TODO: option1 (instead of 3 lines above)
+    # formatted_withdrawal = @withdrawal_formatter.format(withdrawal_amount, @balance, date)
+    # @all_transactions << formatted_withdrawal
+
+    # TODO: option2 (instead of 3 lines above)
+    # @all_transactions << Withdrawal.new(withdrawal_amount, @balance, date)
   end
 
   private
@@ -44,6 +52,7 @@ class Account
     @all_transactions << "#{date} || || #{two_dp_withdrawal} || #{two_dp_balance}"
   end
 
+  # TODO: extract into another class/module just for Decimal Point Formatting (Money Formatter)
   def convert_two_dp(float)
     '%.2f' % float
   end
