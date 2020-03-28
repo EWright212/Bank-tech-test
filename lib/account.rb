@@ -9,9 +9,7 @@ class Account
 
   def make_deposit(deposit_amount, date)
     # TODO: make these if "guard clauses" one-liners: raise xxx if yyy
-    if deposit_amount.negative?
-      raise RuntimeError, "Cannot input a negative amount"
-    end
+    raise RuntimeError, "Cannot input a negative amount" if deposit_amount.negative?
 
     @balance += deposit_amount
 
@@ -23,9 +21,7 @@ class Account
 
   def make_withdrawal(withdrawal_amount, date)
     # TODO: make these if "guard clauses" one-liners: raise xxx if yyy
-    if withdrawal_amount.negative? 
-      raise "Cannot input a negative amount"
-    end
+    raise RuntimeError, "Cannot input a negative amount" if withdrawal_amount.negative? 
 
     @balance -= withdrawal_amount
 
